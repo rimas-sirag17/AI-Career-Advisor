@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-jobs = pd.read_csv(r"C:\Users\LAPTOPS HOUSE\PycharmProjects\PythonProject3\jobs_dataset.csv")
+jobs = pd.read_csv("jobs_dataset.csv")
 jobs['Required Skills'] = jobs['Required Skills'].str.lower()
 
 
@@ -62,4 +62,5 @@ recommended_jobs = jobs.sort_values(by='Match %', ascending=False)
 
 
 print("\nTop Job Matches With Skill Gaps & Course Suggestions:\n")
+
 print(recommended_jobs[['Job Title', 'Match %', 'Missing Skills', 'Suggested Courses']].head(5))
