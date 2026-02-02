@@ -10,3 +10,6 @@ An intelligent system that analyzes user skills and educational background to re
 Enter your skills separated by commas in the input box (e.g., Python, Excel, SQL)
 Click "Analyze My Career"
 View top job matches, missing skills, and recommended courses
+
+To Try App:
+https://ai-career-advisor-cnwakxgnshqumjesmgnuqk.streamlit.app/
