@@ -7,7 +7,7 @@ st.set_page_config(page_title="AI Career Advisor", layout="centered")
 st.title("💼 AI Career Advisor")
 st.write("Enter your skills and discover your top job matches with recommended courses!")
 
-jobs = pd.read_csv(r"C:\Users\LAPTOPS HOUSE\PycharmProjects\PythonProject3\jobs_dataset.csv")
+jobs = pd.read_csv("jobs_dataset.csv")
 jobs['Required Skills'] = jobs['Required Skills'].str.lower()
 
 user_skills = st.text_input("Enter your skills separated by commas (e.g., Python, Excel, SQL, Analysis, APIs):")
@@ -66,4 +66,5 @@ if user_skills:
 
 
     st.subheader("Top Job Matches:")
+
     st.dataframe(recommended_jobs[['Job Title', 'Match %', 'Missing Skills', 'Suggested Courses']].head(10))
